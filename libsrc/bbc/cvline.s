@@ -6,7 +6,7 @@
 ;
 
         .export         _cvlinexy, _cvline
-        .import         gotoxy, putchar, newline
+        .import         gotoxy, putchar, cputdirect
         .importzp       tmp1, cvlinechar
 
 _cvlinexy:
@@ -20,7 +20,8 @@ _cvline:
         sta     tmp1
 L1:     lda     #cvlinechar     ; Vertical bar
         jsr     putchar         ; Write, no cursor advance
-        jsr     newline         ; Advance cursor to next line
+	lda	#10
+	jsr	cputdirect
         dec     tmp1
         bne     L1
 L9:     rts

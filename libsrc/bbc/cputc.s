@@ -13,11 +13,15 @@ _cputc = OSASCI
 
 newline = OSNEWL
 
-putchar = OSASCI
+.proc	putchar
+	jsr	OSWRCH
+	lda	#8
+	jmp	OSWRCH
+.endproc
 
 cputdirect = OSWRCH
 
-putchardirect = OSWRCH
+putchardirect = putchar
 
 .proc	_cputcxy
 	pha
