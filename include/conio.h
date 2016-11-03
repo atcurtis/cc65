@@ -67,6 +67,8 @@
 #  include <atari.h>
 #elif defined(__ATMOS__)
 #  include <atmos.h>
+#elif defined(__BBC__) || defined(__BBCMASTER__)
+#  include <bbc.h>
 #elif defined(__CBM__)
 #  include <cbm.h>
 #elif defined(__GAMATE__)

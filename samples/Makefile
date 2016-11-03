@@ -147,6 +147,12 @@ EXELIST_atari =    \
 
 EXELIST_atarixl = $(EXELIST_atari)
 
+EXELIST_bbc =      \
+        ascii      \
+        hello
+
+EXELIST_bbcmaster = $(EXELIST_bbc)
+
 # --------------------------------------------------------------------------
 # Rules to make the binaries and the disk
 
