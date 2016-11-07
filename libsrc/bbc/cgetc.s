@@ -6,7 +6,9 @@
 
         .include        "bbc.inc"
 
-.proc	_cgetc
+_cgetc = OSRDCH
+
+.proc	_cgetc_echo
 	jsr	OSRDCH
 	cmp	#$0d		;\r
 	bne	Lecho

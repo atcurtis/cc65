@@ -9,6 +9,7 @@ CLOCKS_PER_SEC = 100
 
 VDU_STATUS     := $D0         ; VDU status as returned by OSBYTE &75
 AUTO_REPEAT    := $E7         ; Auto repeat countdown timer 
+KEY_PRESSED    := $EC         ; Pressed key code or 0 if none pressed
 
 TEXT_X1        := $308        ; Text window, left hand column
 TEXT_Y1        := $309        ; Text window, bottom row
@@ -16,7 +17,15 @@ TEXT_X2        := $30A        ; Text window, right hand column
 TEXT_Y2        := $30B        ; Text window, top row
 CURS_X         := $318        ; Current text cursor X co-ordinate
 CURS_Y         := $319        ; Current text cursor Y co-ordinate
+HIMEM          := $34E        ; High byte of bottom of screen memory
+MODESIZE       := $354        ; High byte of size of screen memory
 MODE           := $355        ; Current screen mode
+MODEMEMMAP     := $356        ; Memory map type.
+FTCOL          := $357        ; Foreground text colour
+BTCOL          := $358        ; Backgrould text colour
+FGCOL          := $359        ; Foreground graphics colour
+BGCOL          := $35A        ; Background graphics colour
+COLOURS        := $360        ; Number of logical colours minus one
 
 ; ---------------------------------------------------------------------------
 ; Vectors

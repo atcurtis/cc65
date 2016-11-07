@@ -149,7 +149,8 @@ EXELIST_atarixl = $(EXELIST_atari)
 
 EXELIST_bbc =      \
         ascii      \
-        hello
+        hello      \
+        sieve
 
 EXELIST_bbcmaster = $(EXELIST_bbc)
 
